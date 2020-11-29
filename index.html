@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SIM ESTIM</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1> Simulation des paramètres de l'estimateur</h1> 
+</div>
+  
+<div class="container">
+  <div class="row">
+
+    <div class="col-sm-2"></div>
+
+    <div class="col-sm-8">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6"> <h4>Données formulaire </h4>
+
+            <div class="form-group row">
+              <label for="Surface" class="col-6 col-form-label">Surface en m<sup>2</sup>:</label>
+              <div class="col-4">
+                <input class="form-control" type="number" value="40" id="Surface">
+              </div>
+              <div class="col-2"><i class="material-icons">clear</i></div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-6 col-form-label">Surface terrasse:</label>
+              <div class="col-4">
+                <input class="form-control" type="number" value="0" id="SurfaceT">
+              </div>
+              <div class="col-2"><i class="material-icons">clear</i></div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-6 col-form-label">Surface balcon:</label>
+              <div class="col-4">
+                <input class="form-control" type="number" value="0" id="SurfaceB">
+              </div>
+              <div class="col-2"><i class="material-icons">clear</i></div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-6 col-form-label">Geolocalisation:</label>
+              <div class="col-4">
+                <input class="form-control" type="text"  id="geo" disabled>
+                <div> -</div>
+              </div>
+              <div class="col-2"><i class="material-icons">arrow_right_alt</i></div>
+            </div>
+
+             <div class="form-group row">
+               <div class="col-6"> </div>
+              <label class="col-6 col-form-label">Etat des travaux:</label>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-6"> </div>
+              <label class="col-6 col-form-label">Etage :</label>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-6"> </div>
+              <label class="col-6 col-form-label">Garage ou box :</label>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-6"> </div>
+              <label class="col-6 col-form-label">Luminosité :</label>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-6"> </div>
+              <label class="col-6 col-form-label">Vis-à-vis :</label>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-6"> </div>
+              <label class="col-6 text-primary">Prix brute :</label>
+            </div>
+
+
+
+
+
+
+
+
+          </div>
+          <div class="col-sm-6"><h4> Paramètres / Coefficients</h4>
+
+             <div class="form-group row">
+              <div class="col-4">
+                <input class="form-control" type="number" value="1" id="Coef1">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-4">
+                <input class="form-control" type="number" value="0.3" id="Coef2">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-4">
+                <input class="form-control" type="number" value="0.3" id="Coef3">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-4">
+                <input class="form-control" type="number" value="10476" id="PRICE">
+                <div class="text-primary">Prix au m<sup>2</sup></div>
+              </div>
+              <div class="col-8">
+                <p class="font-weight-light" style="font-size: 10px">Moyenne du prix au m<sup>2</sup> sur Paris = 10476€ (entre 6909 € et 16408 €) </p>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-4">
+                <input class="form-control" type="number" value="0" id="Coef4">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-4">
+                <input class="form-control" type="number" value="0" id="Coef5">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-4">
+                <input class="form-control" type="number" value="0" id="Coef6">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-4">
+                <input class="form-control" type="number" value="0" id="Coef7">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-4">
+                <input class="form-control" type="number" value="0" id="Coef8">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-4">
+                <input class="form-control" type="number" value="0" id="Prixbrute">
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        <div style='text-align: center;'>
+          <button  type="button" class="btn btn-primary" onclick="calculer()">Calculer</button>
+          <h3  id="Resultat">Estimation :  €</h3>
+        </div> 
+      </div>   
+    </div>
+
+    <div class="col-sm-2"> </div>
+
+  </div>
+</div>
+
+
+
+</body>
+
+<script type="text/javascript">
+  
+function calculer(){
+
+S=document.getElementById('Surface').value;
+ST=document.getElementById('SurfaceT').value;
+SB=document.getElementById('SurfaceB').value;
+
+PRICE=document.getElementById('PRICE').value;
+Prixbrute=document.getElementById('Prixbrute').value;
+
+C1=document.getElementById('Coef1').value;
+C2=document.getElementById('Coef2').value;
+C3=document.getElementById('Coef3').value;
+C4=document.getElementById('Coef4').value;
+C5=document.getElementById('Coef5').value;
+C6=document.getElementById('Coef6').value;
+C7=document.getElementById('Coef7').value;
+C8=document.getElementById('Coef8').value;
+
+
+  var E=(S*C1+ST*C2+SB*C3)*PRICE+(C4*1+C5*1+C6*1+C7*1+C8*1)*Prixbrute
+  document.getElementById('Resultat').innerHTML="Estimation :"+E+"  €"
+}
+
+</script>
+</html>
