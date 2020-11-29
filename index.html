@@ -162,6 +162,8 @@
         </div>
         <div style='text-align: center;'>
           <button  type="button" class="btn btn-primary" onclick="calculer()">Calculer</button>
+          <p class="font-weight-light" style="font-size: 12px"> Formule utilisée: <br>
+           E= (S*C1 + ST*C2 + SB*C3)*PrixM2 + (C4*1 +C5*1 +C6*1 +C7*1 +C8*1)*Prixbrute </p>
           <h3  id="Resultat">Estimation :  €</h3>
         </div> 
       </div>   
@@ -172,6 +174,8 @@
   </div>
 </div>
 
+<div class="jumbotron text-center">
+</div>
 
 
 </body>
@@ -198,7 +202,7 @@ C8=document.getElementById('Coef8').value;
 
 
   var E=(S*C1+ST*C2+SB*C3)*PRICE+(C4*1+C5*1+C6*1+C7*1+C8*1)*Prixbrute
-  document.getElementById('Resultat').innerHTML="Estimation :"+E+"  €"
+  document.getElementById('Resultat').innerHTML="Estimation: "+E+"  €"
 }
 
 </script>
